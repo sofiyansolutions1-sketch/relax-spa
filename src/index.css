@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: "Playfair Display", Georgia, serif;
+    --font-sans: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #ffffff;
+    color: #1e293b;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Luxury Purple & Emerald Gradients */
+.purple-gradient-text {
+  background: linear-gradient(135deg, #4c1d95 0%, #7e22ce 50%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.purple-emerald-badge {
+  background: linear-gradient(135deg, #f5f3ff 0%, #ecfdf5 100%);
+  border: 1px solid #ddd6fe;
+}
+
+.purple-button {
+  background: linear-gradient(135deg, #6b21a8 0%, #581c87 100%);
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(107, 33, 168, 0.25);
+}
+
+.purple-button:hover {
+  background: linear-gradient(135deg, #7e22ce 0%, #6b21a8 100%);
+  box-shadow: 0 8px 25px rgba(107, 33, 168, 0.35);
+  transform: translateY(-2px);
+}
+
+.emerald-button {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(5, 150, 105, 0.25);
+}
+
+.emerald-button:hover {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  box-shadow: 0 8px 25px rgba(5, 150, 105, 0.35);
+  transform: translateY(-2px);
+}
+
+.whatsapp-button {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 18px rgba(16, 185, 129, 0.3);
+}
+
+.whatsapp-button:hover {
+  background: linear-gradient(135deg, #22c55e 0%, #059669 100%);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.45);
+  transform: translateY(-2px);
+}
+
+/* Glassmorphism White Cards with Purple/Green Subtle Borders */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(221, 214, 254, 0.7);
+  box-shadow: 0 10px 30px -5px rgba(107, 33, 168, 0.06);
+}
+
+.glass-card:hover {
+  border-color: rgba(167, 243, 208, 0.9);
+  box-shadow: 0 15px 35px -5px rgba(5, 150, 105, 0.12);
+}
+
+/* Keyframe animations for gentle attractive movement */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-glow {
+  animation: pulseGlow 5s ease-in-out infinite;
+}
+
+/* Floating Contact Buttons Animations */
+@keyframes phoneWiggle {
+  0%, 80%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  85%, 95% {
+    transform: rotate(-15deg) scale(1.1);
+  }
+  90% {
+    transform: rotate(15deg) scale(1.1);
+  }
+}
+
+.animate-phone-wiggle {
+  animation: phoneWiggle 3s ease-in-out infinite;
+}
+
+@keyframes whatsappPulse {
+  0%, 80%, 100% {
+    transform: scale(1);
+  }
+  85%, 95% {
+    transform: scale(1.12);
+  }
+  90% {
+    transform: scale(0.95);
+  }
+}
+
+.animate-whatsapp-bounce {
+  animation: whatsappPulse 3s ease-in-out infinite 1.5s;
+}
+
+@keyframes ripplePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.65), 0 8px 24px rgba(0, 0, 0, 0.25);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0), 0 8px 24px rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 8px 24px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.animate-whatsapp-ripple {
+  animation: ripplePulse 2.4s infinite;
+}
+
+@keyframes callRipple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(147, 51, 234, 0.65), 0 8px 24px rgba(0, 0, 0, 0.25);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(147, 51, 234, 0), 0 8px 24px rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(147, 51, 234, 0), 0 8px 24px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.animate-call-ripple {
+  animation: callRipple 2.4s infinite 1.2s;
+}
+
+/* Clean Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

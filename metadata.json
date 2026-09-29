@@ -1,0 +1,6 @@
+{
+  "name": "Relax Spa - Premium Wellness in Mavdi, Rajkot",
+  "description": "Premium wellness and relaxation spa in Mavdi, Rajkot. Experience a comfortable, peaceful atmosphere with easy phone and WhatsApp booking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
